@@ -5,6 +5,7 @@ from .views import *
 app_name = 'product_apis'
 
 router = DefaultRouter()
+
 router.register('products', ProductListViewSet, basename='products')
 router.register('user_product', UserProductView, basename='user-product')
 
