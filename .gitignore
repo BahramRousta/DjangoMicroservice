@@ -148,3 +148,4 @@ cython_debug/
 *.jpg
 *.rdb
 *.png
+*.JPEG
