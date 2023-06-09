@@ -1,14 +1,14 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import product_gateways
+from .views import ProductListGateWay
 
 app_name = 'products'
-#
-# router = DefaultRouter()
-#
-# router.register('login', product_gateways, basename='login')
-#
+
+router = DefaultRouter()
+
+router.register('list', ProductListGateWay, basename='list/')
+
 
 urlpatterns = [
-    path('list/', product_gateways, name='product_gateways'),
+    path('', include(router.urls)),
 ]
